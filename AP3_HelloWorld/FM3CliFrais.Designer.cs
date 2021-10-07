@@ -1,7 +1,7 @@
 ﻿
 namespace AP3_HelloWorld
 {
-    partial class FMission3
+    partial class FM3CliFrais
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +29,32 @@ namespace AP3_HelloWorld
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFrais = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // btnFrais
+            // panel1
             // 
-            this.btnFrais.Location = new System.Drawing.Point(12, 12);
-            this.btnFrais.Name = "btnFrais";
-            this.btnFrais.Size = new System.Drawing.Size(75, 23);
-            this.btnFrais.TabIndex = 0;
-            this.btnFrais.Text = "Fiche Frais";
-            this.btnFrais.UseVisualStyleBackColor = true;
-            this.btnFrais.Click += new System.EventHandler(this.btnFrais_Click);
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(803, 42);
+            this.panel1.TabIndex = 0;
             // 
-            // FMission3
+            // FM3CliFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnFrais);
-            this.Name = "FMission3";
-            this.Text = "Mission 3";
+            this.Controls.Add(this.panel1);
+            this.Name = "FM3CliFrais";
+            this.Text = "FM3CliFrais";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnFrais;
+        private System.Windows.Forms.Panel panel1;
     }
 }
