@@ -15,7 +15,6 @@ namespace AP3_HelloWorld
         public FMission3()
         {
             InitializeComponent();
-            //* Objectif Top1 *//
         }
     }
 }
