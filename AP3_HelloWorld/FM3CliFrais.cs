@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace AP3_HelloWorld
 {
-    public partial class FMission3 : Form
+    public partial class FM3CliFrais : Form
     {
-        public FMission3()
+        public FM3CliFrais()
         {
             InitializeComponent();
-        }
-
-        private void btnFrais_Click(object sender, EventArgs e)
-        {
-            Form f = new FM3CliFrais();
-            f.Show();
         }
     }
 }
