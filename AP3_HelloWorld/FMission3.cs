@@ -21,7 +21,6 @@ namespace AP3_HelloWorld
         private void btnFrais_Click(object sender, EventArgs e)
         {
             Form f = new FM3CliFrais();
-            f.MdiParent = this;
             f.Show();
         }
     }
