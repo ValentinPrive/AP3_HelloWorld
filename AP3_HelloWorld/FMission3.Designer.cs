@@ -37,7 +37,7 @@ namespace AP3_HelloWorld
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FMission3";
-            this.Text = "Mission3";
+            this.Text = "Mission 3";
             this.ResumeLayout(false);
 
         }
