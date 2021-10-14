@@ -41,8 +41,17 @@ namespace AP3_HelloWorld
         }
         //---------------
         //Vérification que le mot de passe existe
-        
 
+        public static bool mdpVerif(string mdp)
+        {
+            bool vretour = false;
+            if (utilisateurConnecte.password.Equals(getMdpMD5(mdp)))
+            {
+                vretour = true;
+                maConnexion.SaveChanges();
+            }
+            return vretour;
+        }
 
         //--------------
 
