@@ -16,5 +16,11 @@ namespace AP3_HelloWorld
         {
             InitializeComponent();
         }
+
+        private void FM3CliFrais_SizeChanged(object sender, EventArgs e)
+        {
+            int largeur = panel1.Width;
+            lblFicheFrais.Left = largeur / 2 - lblFicheFrais.Width / 2;
+        }
     }
 }
