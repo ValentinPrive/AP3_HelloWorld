@@ -27,7 +27,7 @@ namespace AP3_HelloWorld
 
 
         //Vérification que l'utilisateur existe
-        public static bool userexists(string id)
+        public static bool utilVerif(string id)
         {
             bool vretour = false;
             if(maConnexion.Visiteur.Where (x=> x.identifiant == id).ToList().Count ==1)
@@ -39,6 +39,26 @@ namespace AP3_HelloWorld
             return vretour;
         }
         //---------------
+        //Vérification que le mot de passe existe
+        
+
+
+        //--------------
+
+        //Cryptage de mot de passe
+        private static string getMdpMD5(string pwdSaisi)
+        {
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(PasswdSaisi);
+            byte[] hash = (MD5.Create()).ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("x2"));
+            }
+            return sb.ToString();
+        }
+
+        //--------------
 
 
     }

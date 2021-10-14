@@ -19,7 +19,10 @@ namespace AP3_HelloWorld
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            
+            if(Modele.utilVerif(txtIdentifiant.Text))
+            {
+                
+            }
         }
 
         private void FConnexion_Load(object sender, EventArgs e)
