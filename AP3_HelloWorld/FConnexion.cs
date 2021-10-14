@@ -21,7 +21,13 @@ namespace AP3_HelloWorld
         {
             if(Modele.utilVerif(txtIdentifiant.Text))
             {
-                
+                if (Modele.mdpVerif(txtMdp.Text))
+                {
+                    MessageBox.Show("Identification réussi");
+                    System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
+                    x.Start();
+                    this.Close();
+                }
             }
         }
 
