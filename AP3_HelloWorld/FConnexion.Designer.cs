@@ -102,6 +102,7 @@ namespace AP3_HelloWorld
             this.Controls.Add(this.lblIdentifiant);
             this.Name = "FConnexion";
             this.Text = "Connexion";
+            this.Load += new System.EventHandler(this.FConnexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

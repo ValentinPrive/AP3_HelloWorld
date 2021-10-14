@@ -19,7 +19,12 @@ namespace AP3_HelloWorld
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            Close();
+            
+        }
+
+        private void FConnexion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

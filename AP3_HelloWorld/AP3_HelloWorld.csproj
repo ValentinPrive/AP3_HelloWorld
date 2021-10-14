@@ -78,11 +78,11 @@
     <Compile Include="FM3CliFrais.Designer.cs">
       <DependentUpon>FM3CliFrais.cs</DependentUpon>
     </Compile>
-    <Compile Include="FMission1.cs">
+    <Compile Include="FM1RLab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FMission1.Designer.cs">
-      <DependentUpon>FMission1.cs</DependentUpon>
+    <Compile Include="FM1RLab.Designer.cs">
+      <DependentUpon>FM1RLab.cs</DependentUpon>
     </Compile>
     <Compile Include="FMission2.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="FM3CliFrais.resx">
       <DependentUpon>FM3CliFrais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FMission1.resx">
-      <DependentUpon>FMission1.cs</DependentUpon>
+    <EmbeddedResource Include="FM1RLab.resx">
+      <DependentUpon>FM1RLab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMission2.resx">
       <DependentUpon>FMission2.cs</DependentUpon>

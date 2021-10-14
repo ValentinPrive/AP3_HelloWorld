@@ -32,7 +32,7 @@ namespace AP3_HelloWorld
 
         private void btnMission1_Click(object sender, EventArgs e)
         {
-            Form f = new FMission1();
+            Form f = new FM1RLab();
             f.Show();
         }
 

@@ -24,5 +24,22 @@ namespace AP3_HelloWorld
         {
             return maConnexion.Visiteur.ToList();
         }
+
+
+        //Vérification que l'utilisateur existe
+        public static bool userexists(string id)
+        {
+            bool vretour = false;
+            if(maConnexion.Visiteur.Where (x=> x.identifiant == id).ToList().Count ==1)
+            {
+                vretour = true;
+                UtilisateurConnecte = maConnexion.Visiteur.Where(x => x.identifiant == id).ToList()[0];
+                maConnexion.SaveChanges();
+            }
+            return vretour;
+        }
+        //---------------
+
+
     }
 }

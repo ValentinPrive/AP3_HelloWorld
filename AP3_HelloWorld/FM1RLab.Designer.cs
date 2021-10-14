@@ -1,7 +1,7 @@
 ﻿
 namespace AP3_HelloWorld
 {
-    partial class FMission1
+    partial class FM1RLab
     {
         /// <summary>
         /// Required designer variable.
