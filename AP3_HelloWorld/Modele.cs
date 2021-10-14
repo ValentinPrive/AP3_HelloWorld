@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Security.Cryptography;
 
 namespace AP3_HelloWorld
 {
@@ -48,7 +49,7 @@ namespace AP3_HelloWorld
         //Cryptage de mot de passe
         private static string getMdpMD5(string pwdSaisi)
         {
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(PasswdSaisi);
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(pwdSaisi);
             byte[] hash = (MD5.Create()).ComputeHash(inputBytes);
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < hash.Length; i++)
@@ -57,7 +58,6 @@ namespace AP3_HelloWorld
             }
             return sb.ToString();
         }
-
         //--------------
 
 
