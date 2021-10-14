@@ -17,6 +17,11 @@ namespace AP3_HelloWorld
             InitializeComponent();
         }
 
+        public static void threadProc()
+        {
+            Application.Run(new FMenu());
+        }
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             if(Modele.utilVerif(txtIdentifiant.Text))
@@ -24,7 +29,7 @@ namespace AP3_HelloWorld
                 if (Modele.mdpVerif(txtMdp.Text))
                 {
                     MessageBox.Show("Identification réussi");
-                    System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
+                    System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(threadProc));
                     x.Start();
                     this.Close();
                 }

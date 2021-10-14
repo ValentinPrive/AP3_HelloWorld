@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace AP3_HelloWorld
 {
@@ -26,7 +28,7 @@ namespace AP3_HelloWorld
             return maConnexion.Visiteur.ToList();
         }
 
-
+        //CONNEXION
         //Vérification que l'utilisateur existe
         public static bool utilVerif(string id)
         {
@@ -40,6 +42,7 @@ namespace AP3_HelloWorld
             return vretour;
         }
         //---------------
+
         //Vérification que le mot de passe existe
 
         public static bool mdpVerif(string mdp)
@@ -52,7 +55,6 @@ namespace AP3_HelloWorld
             }
             return vretour;
         }
-
         //--------------
 
         //Cryptage de mot de passe
@@ -68,7 +70,9 @@ namespace AP3_HelloWorld
             return sb.ToString();
         }
         //--------------
+        //---------------------------------------------------------------
 
+        
 
     }
 }
