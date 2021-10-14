@@ -21,6 +21,9 @@ namespace AP3_HelloWorld
         {
             int largeur = panel1.Width;
             lblFicheFrais.Left = largeur / 2 - lblFicheFrais.Width / 2;
+
+            pictureBox1.Left = largeur / 2 - pictureBox1.Width / 2;
         }
+
     }
 }
