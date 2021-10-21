@@ -40,7 +40,7 @@ namespace AP3_HelloWorld
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(339, 292);
+            this.btnOK.Location = new System.Drawing.Point(350, 280);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 17;
@@ -62,7 +62,7 @@ namespace AP3_HelloWorld
             // 
             // txtMdp
             // 
-            this.txtMdp.Location = new System.Drawing.Point(210, 229);
+            this.txtMdp.Location = new System.Drawing.Point(221, 229);
             this.txtMdp.Name = "txtMdp";
             this.txtMdp.Size = new System.Drawing.Size(204, 20);
             this.txtMdp.TabIndex = 15;
@@ -72,7 +72,7 @@ namespace AP3_HelloWorld
             this.lblMdp.AutoSize = true;
             this.lblMdp.BackColor = System.Drawing.Color.Transparent;
             this.lblMdp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMdp.Location = new System.Drawing.Point(115, 232);
+            this.lblMdp.Location = new System.Drawing.Point(138, 232);
             this.lblMdp.Name = "lblMdp";
             this.lblMdp.Size = new System.Drawing.Size(77, 13);
             this.lblMdp.TabIndex = 14;
@@ -80,7 +80,7 @@ namespace AP3_HelloWorld
             // 
             // txtIdentifiant
             // 
-            this.txtIdentifiant.Location = new System.Drawing.Point(210, 178);
+            this.txtIdentifiant.Location = new System.Drawing.Point(221, 178);
             this.txtIdentifiant.Name = "txtIdentifiant";
             this.txtIdentifiant.Size = new System.Drawing.Size(204, 20);
             this.txtIdentifiant.TabIndex = 13;
@@ -90,7 +90,7 @@ namespace AP3_HelloWorld
             this.lblIdentifiant.AutoSize = true;
             this.lblIdentifiant.BackColor = System.Drawing.Color.Transparent;
             this.lblIdentifiant.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdentifiant.Location = new System.Drawing.Point(115, 181);
+            this.lblIdentifiant.Location = new System.Drawing.Point(138, 181);
             this.lblIdentifiant.Name = "lblIdentifiant";
             this.lblIdentifiant.Size = new System.Drawing.Size(59, 13);
             this.lblIdentifiant.TabIndex = 12;
@@ -101,7 +101,7 @@ namespace AP3_HelloWorld
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(627, 419);
+            this.ClientSize = new System.Drawing.Size(626, 419);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblConnexion);
             this.Controls.Add(this.txtMdp);
