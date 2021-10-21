@@ -16,5 +16,14 @@ namespace AP3_HelloWorld
         {
             InitializeComponent();
         }
+
+        private void FMission2_Load(object sender, EventArgs e)
+        {
+            Modele.init();
+            cboMedecin.ValueMember = "idMedecin";
+            cboMedecin.DisplayMember = "nom" + " " + "prenom";
+            bsMedecin.DataSource = Modele2.listemedecin();
+            cboMedecin.DataSource = bsMedecin;
+        }
     }
 }
