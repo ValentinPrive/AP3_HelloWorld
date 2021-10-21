@@ -35,10 +35,16 @@ namespace AP3_HelloWorld
                 }
             }
         }
-
+        //Passage du mot de passe en *
         private void FConnexion_Load(object sender, EventArgs e)
         {
-
+            txtMdp.PasswordChar = '*';
         }
+        //-------------------------
+
+
+
+
+
     }
 }
