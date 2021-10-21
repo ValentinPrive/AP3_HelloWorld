@@ -51,7 +51,9 @@ namespace AP3_HelloWorld
             // lblConnexion
             // 
             this.lblConnexion.AutoSize = true;
+            this.lblConnexion.BackColor = System.Drawing.Color.Transparent;
             this.lblConnexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConnexion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblConnexion.Location = new System.Drawing.Point(255, 116);
             this.lblConnexion.Name = "lblConnexion";
             this.lblConnexion.Size = new System.Drawing.Size(115, 25);
@@ -68,6 +70,8 @@ namespace AP3_HelloWorld
             // lblMdp
             // 
             this.lblMdp.AutoSize = true;
+            this.lblMdp.BackColor = System.Drawing.Color.Transparent;
+            this.lblMdp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMdp.Location = new System.Drawing.Point(115, 232);
             this.lblMdp.Name = "lblMdp";
             this.lblMdp.Size = new System.Drawing.Size(77, 13);
@@ -84,6 +88,8 @@ namespace AP3_HelloWorld
             // lblIdentifiant
             // 
             this.lblIdentifiant.AutoSize = true;
+            this.lblIdentifiant.BackColor = System.Drawing.Color.Transparent;
+            this.lblIdentifiant.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblIdentifiant.Location = new System.Drawing.Point(115, 181);
             this.lblIdentifiant.Name = "lblIdentifiant";
             this.lblIdentifiant.Size = new System.Drawing.Size(59, 13);
