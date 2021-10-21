@@ -32,7 +32,14 @@ namespace AP3_HelloWorld
                     System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(threadProc));
                     x.Start();
                     this.Close();
+                }else
+                {
+                    MessageBox.Show("Connexion refusée");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Connexion refusée");
             }
         }
         //Passage du mot de passe en *
