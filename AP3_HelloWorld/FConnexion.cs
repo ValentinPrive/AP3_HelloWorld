@@ -35,12 +35,12 @@ namespace AP3_HelloWorld
                     this.Close();
                 }else
                 {
-                    MessageBox.Show("Connexion refusée");
+                    MessageBox.Show("Identification refusée");
                 }
             }
             else
             {
-                MessageBox.Show("Connexion refusée");
+                MessageBox.Show("Identification refusée");
             }
         }
         //------------------------------
