@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="connectGSB.fichefrais" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="connectGSB.FraisForfait" Width="1.5" PointX="8.25" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="connectGSB.Laboratoire" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="connectGSB.LigneFraisForfait" Width="1.5" PointX="10.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="connectGSB.LigneFraisForfait" Width="1.5" PointX="10.5" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="connectGSB.LigneFraisHorsForfait" Width="1.5" PointX="7.5" PointY="16" IsExpanded="true" />
         <EntityTypeShape EntityType="connectGSB.MEDECIN" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="connectGSB.MEDICAMENT" Width="1.5" PointX="8.25" PointY="22" IsExpanded="true" />
