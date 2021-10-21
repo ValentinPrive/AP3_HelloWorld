@@ -108,6 +108,8 @@ namespace AP3_HelloWorld
             this.Controls.Add(this.lblMdp);
             this.Controls.Add(this.txtIdentifiant);
             this.Controls.Add(this.lblIdentifiant);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FConnexion";
             this.Text = "Connexion";
             this.Load += new System.EventHandler(this.FConnexion_Load);
