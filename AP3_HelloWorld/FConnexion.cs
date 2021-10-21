@@ -22,6 +22,7 @@ namespace AP3_HelloWorld
             Application.Run(new FMenu());
         }
 
+        //Vérification d'identifiant et mot de passe
         private void btnOK_Click(object sender, EventArgs e)
         {
             if(Modele.utilVerif(txtIdentifiant.Text))
@@ -42,6 +43,8 @@ namespace AP3_HelloWorld
                 MessageBox.Show("Connexion refusée");
             }
         }
+        //------------------------------
+
         //Passage du mot de passe en *
         private void FConnexion_Load(object sender, EventArgs e)
         {
