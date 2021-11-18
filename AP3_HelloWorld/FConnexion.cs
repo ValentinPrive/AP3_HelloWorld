@@ -16,12 +16,7 @@ namespace AP3_HelloWorld
         {
             InitializeComponent();
         }
-
-        public static void threadProc()
-        {
-            Application.Run(new FMenu());
-        }
-
+        //TEST : id : lvillachane mdp : jux7g
         //Vérification d'identifiant et mot de passe
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -45,16 +40,17 @@ namespace AP3_HelloWorld
         }
         //------------------------------
 
+        public static void threadProc()
+        {
+            Application.Run(new FMenu());
+        }
+        
+
         //Passage du mot de passe en *
         private void FConnexion_Load(object sender, EventArgs e)
         {
             txtMdp.PasswordChar = '*';
         }
         //-------------------------
-
-
-
-
-
     }
 }

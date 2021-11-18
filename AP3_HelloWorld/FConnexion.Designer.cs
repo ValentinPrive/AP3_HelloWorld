@@ -108,6 +108,7 @@ namespace AP3_HelloWorld
             this.Controls.Add(this.lblMdp);
             this.Controls.Add(this.txtIdentifiant);
             this.Controls.Add(this.lblIdentifiant);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

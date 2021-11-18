@@ -26,8 +26,8 @@ namespace AP3_HelloWorld
 
         private void FMenu_Shown(object sender, EventArgs e)
         {
-            Form f = new FConnexion();
-            f.Show();
+            //Form f = new FConnexion();
+            //f.Show();
         }
 
         private void btnMission1_Click(object sender, EventArgs e)

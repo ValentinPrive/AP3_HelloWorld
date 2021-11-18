@@ -17,7 +17,7 @@ namespace AP3_HelloWorld
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Modele.init();
-            Application.Run(new FMenu());
+            Application.Run(new FConnexion());
         }
     }
 }
