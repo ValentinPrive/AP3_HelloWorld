@@ -19,9 +19,20 @@ namespace AP3_HelloWorld
 
         private void FM3MenuClient_Load(object sender, EventArgs e)
         {
+            //Chargement de l'utilisateur courant du Modele principal a mon modele
             Visiteur V;
-            bsFicheFrais.DataSource = Modele3.listefrais().Select(x=>new { x.idVisiteur,x.idEtat, x.mois, x.montantValide } );
+            Modele3.UtilisateurConnecte = Modele.UtilisateurConnecte;
+            V = Modele3.UtilisateurConnecte;
+
+
+            bsFicheFrais.DataSource = Modele3.listefrais().Select (x=>new { x.idVisiteur, x.idEtat, x.mois, x.montantValide } );
             dgvFrais.DataSource = bsFicheFrais;
+        }
+
+        private void btnAjoutF_Click(object sender, EventArgs e)
+        {
+            Form f = new FM3CliFrais();
+            f.Show();
         }
     }
 }

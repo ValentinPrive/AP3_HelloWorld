@@ -25,5 +25,13 @@ namespace AP3_HelloWorld
             pictureBox1.Left = largeur / 2 - pictureBox1.Width / 2;
         }
 
+        private void FM3CliFrais_Load(object sender, EventArgs e)
+        {
+            Visiteur V;
+            V = Modele.UtilisateurConnecte;
+            //Dit quel utilisateur se connecte 
+            lblIdVisiteur.Text = V.idVisiteur;
+            lblNomVisiteur.Text = V.nom+" "+V.prenom;
+        }
     }
 }

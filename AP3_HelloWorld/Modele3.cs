@@ -18,11 +18,16 @@ namespace AP3_HelloWorld
         public static void init()
             {
                 maConnexion = new connectGSB1();
+                
             }
         public static List<fichefrais> listefrais()
         {
             init();
             return maConnexion.fichefrais.ToList();
+        }
+        public static List<Visiteur> listevisiteur()
+        {
+            return maConnexion.Visiteur.ToList();
         }
     }
 }

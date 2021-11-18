@@ -37,8 +37,10 @@ namespace AP3_HelloWorld
             this.lblFicheFrais = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.CbDate = new System.Windows.Forms.ComboBox();
+            this.bsVisiteur = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFicheFrais)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAjoutF
@@ -49,6 +51,7 @@ namespace AP3_HelloWorld
             this.btnAjoutF.TabIndex = 0;
             this.btnAjoutF.Text = "Ajouter une fiche de Frais";
             this.btnAjoutF.UseVisualStyleBackColor = true;
+            this.btnAjoutF.Click += new System.EventHandler(this.btnAjoutF_Click);
             // 
             // btnModifF
             // 
@@ -110,6 +113,7 @@ namespace AP3_HelloWorld
             this.Load += new System.EventHandler(this.FM3MenuClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFicheFrais)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +128,6 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.BindingSource bsFicheFrais;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.ComboBox CbDate;
+        private System.Windows.Forms.BindingSource bsVisiteur;
     }
 }

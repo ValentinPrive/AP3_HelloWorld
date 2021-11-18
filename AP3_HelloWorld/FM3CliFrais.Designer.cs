@@ -43,6 +43,7 @@ namespace AP3_HelloWorld
             this.lblAnnée = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,11 +86,11 @@ namespace AP3_HelloWorld
             this.lblVisiteur.AutoSize = true;
             this.lblVisiteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblVisiteur.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblVisiteur.Location = new System.Drawing.Point(23, 213);
+            this.lblVisiteur.Location = new System.Drawing.Point(23, 243);
             this.lblVisiteur.Name = "lblVisiteur";
-            this.lblVisiteur.Size = new System.Drawing.Size(75, 20);
+            this.lblVisiteur.Size = new System.Drawing.Size(141, 20);
             this.lblVisiteur.TabIndex = 2;
-            this.lblVisiteur.Text = "Visiteur:";
+            this.lblVisiteur.Text = "Nom du Visiteur:";
             // 
             // label1
             // 
@@ -131,7 +132,7 @@ namespace AP3_HelloWorld
             this.lblNomVisiteur.AutoSize = true;
             this.lblNomVisiteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblNomVisiteur.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblNomVisiteur.Location = new System.Drawing.Point(95, 243);
+            this.lblNomVisiteur.Location = new System.Drawing.Point(170, 243);
             this.lblNomVisiteur.Name = "lblNomVisiteur";
             this.lblNomVisiteur.Size = new System.Drawing.Size(132, 20);
             this.lblNomVisiteur.TabIndex = 5;
@@ -142,7 +143,7 @@ namespace AP3_HelloWorld
             this.lblIdVisiteur.AutoSize = true;
             this.lblIdVisiteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblIdVisiteur.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblIdVisiteur.Location = new System.Drawing.Point(95, 213);
+            this.lblIdVisiteur.Location = new System.Drawing.Point(170, 214);
             this.lblIdVisiteur.Name = "lblIdVisiteur";
             this.lblIdVisiteur.Size = new System.Drawing.Size(112, 20);
             this.lblIdVisiteur.TabIndex = 6;
@@ -211,11 +212,23 @@ namespace AP3_HelloWorld
             this.label4.TabIndex = 12;
             this.label4.Text = "Total";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label5.Location = new System.Drawing.Point(23, 214);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "ID du Visiteur:";
+            // 
             // FM3CliFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 571);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblAnnée);
@@ -231,6 +244,7 @@ namespace AP3_HelloWorld
             this.Controls.Add(this.panel1);
             this.Name = "FM3CliFrais";
             this.Text = "FM3CliFrais";
+            this.Load += new System.EventHandler(this.FM3CliFrais_Load);
             this.SizeChanged += new System.EventHandler(this.FM3CliFrais_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -256,5 +270,6 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.Label lblAnnée;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
