@@ -15,7 +15,6 @@ namespace AP3_HelloWorld
         public FMission3()
         {
             InitializeComponent();
-            //* Objectif Top1 *//
         }
 
         private void btnFrais_Click(object sender, EventArgs e)
