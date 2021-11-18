@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AP3_HelloWorld
 {
-    public partial class FMission1 : Form
+    public partial class FM1RLab : Form
     {
-        public FMission1()
+        public FM1RLab()
         {
             InitializeComponent();
         }
