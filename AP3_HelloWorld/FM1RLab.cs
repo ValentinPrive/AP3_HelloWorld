@@ -70,39 +70,46 @@ namespace AP3_HelloWorld
 
         private void FM1RLab_Load(object sender, EventArgs e)
         {
-            /*txtMDP.PasswordChar = '*';*/
-        }
 
+        }
+        //Modification informations nominatives
         private void BValider_Click(object sender, EventArgs e)
         {
-                if (Modele.mdpVerif(ancMDP.Text))
+            if (Modele.mdpVerif(ancMDP.Text))
+            {
+                if (nouvMDP.TextLength > 0 || TBNom.TextLength > 0 || TBPrenom.TextLength > 0 || TBCP.TextLength > 4 || TBVille.TextLength > 0 || TBRue.TextLength > 0)
                 {
-                    MessageBox.Show("Modification réussi");
                     if (nouvMDP.TextLength > 0)
                     {
                         Modele.changepass(nouvMDP.Text);
+                        MessageBox.Show("Le mot de passe à été modifié");
                     }
                     if (TBNom.TextLength > 0)
                     {
                         Modele.changeNom(TBNom.Text);
+                        MessageBox.Show("Le nom à été modifié");
                     }
                     if (TBPrenom.TextLength > 0)
                     {
                         Modele.changePrenom(TBPrenom.Text);
+                        MessageBox.Show("Le prénom à été modifié");
                     }
                     if (TBCP.TextLength > 4)
                     {
                         Modele.changeCP(TBCP.Text);
+                        MessageBox.Show("Le code postal à été modifié");
                     }
                     if (TBVille.TextLength > 0)
                     {
                         Modele.changeVille(TBVille.Text);
+                        MessageBox.Show("La ville à été modifiée");
                     }
                     if (TBRue.TextLength > 0)
                     {
                         Modele.changeRue(TBRue.Text);
+                        MessageBox.Show("L'adresse à été modifiée");
                     }
-
+                }
                 else
                 {
                     MessageBox.Show("Modification refusée");
