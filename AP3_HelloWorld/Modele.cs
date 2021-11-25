@@ -71,12 +71,54 @@ namespace AP3_HelloWorld
         }
         //--------------
 
+        
+        public static bool changepass(string nouveaumdp)
+        {
+            bool vretour = false;
+            UtilisateurConnecte.password = getMdpMD5(nouveaumdp);
+            maConnexion.SaveChanges();
+            return vretour;
+        }
 
+        public static bool changeNom(string nouvNom)
+        {
+            bool vretour = false;
+            UtilisateurConnecte.nom = nouvNom;
+            maConnexion.SaveChanges();
+            return vretour;
+        }
 
-
+        public static bool changeRue(string nouvRue)
+        {
+            bool vretour = false;
+            UtilisateurConnecte.rue = nouvRue;
+            maConnexion.SaveChanges();
+            return vretour;
+        }
+        public static bool changePrenom(string nouvPrenom)
+        {
+            bool vretour = false;
+            UtilisateurConnecte.prenom = nouvPrenom;
+            maConnexion.SaveChanges();
+            return vretour;
+        }
+        public static bool changeVille(string nouvVille)
+        {
+            bool vretour = false;
+            UtilisateurConnecte.ville = nouvVille;
+            maConnexion.SaveChanges();
+            return vretour;
+        }
+        public static bool changeCP(string nouvCP)
+        {
+            bool vretour = false;
+            UtilisateurConnecte.cp = nouvCP;
+            maConnexion.SaveChanges();
+            return vretour;
+        }
         //---------------------------------------------------------------------------------------------
 
-        
+
 
     }
 }

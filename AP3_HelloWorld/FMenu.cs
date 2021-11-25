@@ -14,7 +14,7 @@ namespace AP3_HelloWorld
     {
         public FMenu()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void FMenu_Load(object sender, EventArgs e)
