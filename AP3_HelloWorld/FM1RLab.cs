@@ -75,21 +75,60 @@ namespace AP3_HelloWorld
 
         private void BValider_Click(object sender, EventArgs e)
         {
-            if (Modele.mdpVerif(ancMDP.Text))
+            if (modif())
             {
-                MessageBox.Show("Modification réussi");
-                Modele.changepass(nouvMDP.Text);
-                //Modele.changeNom(Nom.Text);
-                //Modele.changepass(nouvMDP.Text);
-                //Modele.changepass(nouvMDP.Text);
-                //Modele.changepass(nouvMDP.Text);
-                //Modele.changepass(nouvMDP.Text);
-            }
+                if (Modele.mdpVerif(ancMDP.Text))
+                {
+                    MessageBox.Show("Modification réussi");
+                    if (nouvMDP.TextLength > 0)
+                    {
+                        Modele.changepass(nouvMDP.Text);
+                    }
+                    if (TBNom.TextLength > 0)
+                    {
+                        Modele.changeNom(TBNom.Text);
+                    }
+                    if (TBPrenom.TextLength > 0)
+                    {
+                        Modele.changePrenom(TBPrenom.Text);
+                    }
+                    if (TBCP.TextLength > 4)
+                    {
+                        Modele.changeCP(TBCP.Text);
+                    }
+                    if (TBVille.TextLength > 0)
+                    {
+                        Modele.changeVille(TBVille.Text);
+                    }
+                    if (TBRue.TextLength > 0)
+                    {
+                        Modele.changeRue(TBRue.Text);
+                    }
+                }
 
-            else
-            {
-                MessageBox.Show("Modification refusée, vérifiez l'ancien mot de passe");
+                else
+                {
+                    MessageBox.Show("Modification refusée");
+                }
             }
         }
+        /*private bool  verif()
+        {
+            bool vretour=true;
+            if(TBNom.TextLength<2)
+            {
+                errorProvider1.SetError(TBNom, "Le nom doit avoir au moins 2 car");
+                vretour = false;
+
+            }
+            return vretour;
+        }*/
+
+        private bool modif()
+        {
+            bool vretour = true;
+            if (TBNom.TextLength>1)
+        }
+
     }
 }

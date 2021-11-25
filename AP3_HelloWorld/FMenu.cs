@@ -19,8 +19,6 @@ namespace AP3_HelloWorld
 
         private void FMenu_Load(object sender, EventArgs e)
         {
-            bsVisiteur.DataSource = Modele.listevisiteur();
-            Modele.UtilisateurConnecte = Modele.listevisiteur()[0];
             lblUtilConnecte.Text = "Utilisateur connecté : " + Modele.UtilisateurConnecte.identifiant;
         }
 

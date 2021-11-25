@@ -37,7 +37,6 @@ namespace AP3_HelloWorld
             {
                 vretour = true;
                 UtilisateurConnecte = maConnexion.Visiteur.Where(x => x.identifiant == id).ToList()[0];
-                maConnexion.SaveChanges();
             }
             return vretour;
         }
@@ -51,7 +50,6 @@ namespace AP3_HelloWorld
             if (utilisateurConnecte.password.Equals(getMdpMD5(mdp)))
             {
                 vretour = true;
-                maConnexion.SaveChanges();
             }
             return vretour;
         }

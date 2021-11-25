@@ -49,8 +49,10 @@ namespace AP3_HelloWorld
             this.textAncMDP = new System.Windows.Forms.Label();
             this.textNouvMDP = new System.Windows.Forms.Label();
             this.BValider = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGVInfPers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // DGVInfPers
@@ -138,6 +140,7 @@ namespace AP3_HelloWorld
             this.TBNom.Name = "TBNom";
             this.TBNom.Size = new System.Drawing.Size(75, 20);
             this.TBNom.TabIndex = 8;
+
             // 
             // TBPrenom
             // 
@@ -210,6 +213,10 @@ namespace AP3_HelloWorld
             this.BValider.UseVisualStyleBackColor = true;
             this.BValider.Click += new System.EventHandler(this.BValider_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FM1RLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +245,7 @@ namespace AP3_HelloWorld
             this.Load += new System.EventHandler(this.FM1RLab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVInfPers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +272,6 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.Label textAncMDP;
         private System.Windows.Forms.Label textNouvMDP;
         private System.Windows.Forms.Button BValider;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
