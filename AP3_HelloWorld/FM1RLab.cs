@@ -75,8 +75,6 @@ namespace AP3_HelloWorld
 
         private void BValider_Click(object sender, EventArgs e)
         {
-            if (modif())
-            {
                 if (Modele.mdpVerif(ancMDP.Text))
                 {
                     MessageBox.Show("Modification réussi");
@@ -104,7 +102,6 @@ namespace AP3_HelloWorld
                     {
                         Modele.changeRue(TBRue.Text);
                     }
-                }
 
                 else
                 {
@@ -123,12 +120,6 @@ namespace AP3_HelloWorld
             }
             return vretour;
         }*/
-
-        private bool modif()
-        {
-            bool vretour = true;
-            if (TBNom.TextLength>1)
-        }
 
     }
 }
