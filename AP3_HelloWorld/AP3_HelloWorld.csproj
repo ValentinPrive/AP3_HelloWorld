@@ -78,11 +78,11 @@
     <Compile Include="FM3CliFrais.Designer.cs">
       <DependentUpon>FM3CliFrais.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM1RLab.cs">
+    <Compile Include="FM3MenuClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FM1RLab.Designer.cs">
-      <DependentUpon>FM1RLab.cs</DependentUpon>
+    <Compile Include="FM3MenuClient.Designer.cs">
+      <DependentUpon>FM3MenuClient.cs</DependentUpon>
     </Compile>
     <Compile Include="FMission2.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="FM3CliFrais.resx">
       <DependentUpon>FM3CliFrais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FM1RLab.resx">
-      <DependentUpon>FM1RLab.cs</DependentUpon>
+    <EmbeddedResource Include="FM3MenuClient.resx">
+      <DependentUpon>FM3MenuClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMission2.resx">
       <DependentUpon>FMission2.cs</DependentUpon>
@@ -188,6 +188,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="mdlGSB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -224,6 +225,8 @@
       <DependentUpon>mdlGSB.edmx</DependentUpon>
       <LastGenOutput>mdlGSB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

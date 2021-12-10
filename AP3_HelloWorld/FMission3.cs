@@ -15,12 +15,22 @@ namespace AP3_HelloWorld
         public FMission3()
         {
             InitializeComponent();
-            //* Objectif Top1 *//
         }
 
         private void btnFrais_Click(object sender, EventArgs e)
         {
             Form f = new FM3CliFrais();
+            f.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMenutest_Click(object sender, EventArgs e)
+        {
+            Form f = new FM3MenuClient();
             f.Show();
         }
     }
