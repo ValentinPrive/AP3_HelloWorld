@@ -22,12 +22,15 @@ namespace AP3_HelloWorld
             }
         public static List<fichefrais> listefrais()
         {
-            init();
             return maConnexion.fichefrais.ToList();
         }
         public static List<Visiteur> listevisiteur()
         {
             return maConnexion.Visiteur.ToList();
+        }
+        public static List<FraisForfait> listeFF()
+        {
+            return maConnexion.FraisForfait.ToList();
         }
     }
 }

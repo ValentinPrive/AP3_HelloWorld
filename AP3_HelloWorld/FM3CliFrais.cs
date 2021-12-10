@@ -28,10 +28,32 @@ namespace AP3_HelloWorld
         private void FM3CliFrais_Load(object sender, EventArgs e)
         {
             Visiteur V;
-            V = Modele.UtilisateurConnecte;
-            //Dit quel utilisateur se connecte 
+            List<>
+            Modele.UtilisateurConnecte = Modele3.UtilisateurConnecte;
+            V = Modele3.UtilisateurConnecte;
+            //Dit quel utilisateur se connecte
             lblIdVisiteur.Text = V.idVisiteur;
-            lblNomVisiteur.Text = V.nom+" "+V.prenom;
+            lblNomVisiteur.Text = V.prenom + " " + V.nom;
+            txtMNuitée.Text = Convert.ToString(Modele3.listeFF()[0].montant);
+            txtRepas.Text = Convert.ToString(Modele3.listeFF()[8].montant);
+            
+            //Mise des valeurs dans la liste killométrage
+            cbokilométrage.ValueMember = "id";
+            cbokilométrage.DisplayMember = "libelle";
+            bsFrais.DataSource = Modele3.listeFF();
+            cbokilométrage.DataSource = bsFrais;
+
+        }
+
+        private bool test()
+        {
+            bool vr = false;
+            return vr;
+        }
+
+        private void bsFrais_CurrentChanged(object sender, EventArgs e)
+        {
+            txtKilometrage
         }
     }
 }

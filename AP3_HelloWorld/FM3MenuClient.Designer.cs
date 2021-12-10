@@ -38,14 +38,16 @@ namespace AP3_HelloWorld
             this.lblDate = new System.Windows.Forms.Label();
             this.CbDate = new System.Windows.Forms.ComboBox();
             this.bsVisiteur = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFicheFrais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAjoutF
             // 
-            this.btnAjoutF.Location = new System.Drawing.Point(399, 455);
+            this.btnAjoutF.Location = new System.Drawing.Point(399, 533);
             this.btnAjoutF.Name = "btnAjoutF";
             this.btnAjoutF.Size = new System.Drawing.Size(169, 23);
             this.btnAjoutF.TabIndex = 0;
@@ -55,7 +57,7 @@ namespace AP3_HelloWorld
             // 
             // btnModifF
             // 
-            this.btnModifF.Location = new System.Drawing.Point(574, 455);
+            this.btnModifF.Location = new System.Drawing.Point(574, 533);
             this.btnModifF.Name = "btnModifF";
             this.btnModifF.Size = new System.Drawing.Size(147, 23);
             this.btnModifF.TabIndex = 1;
@@ -66,7 +68,7 @@ namespace AP3_HelloWorld
             // 
             this.dgvFrais.AllowUserToDeleteRows = false;
             this.dgvFrais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFrais.Location = new System.Drawing.Point(12, 84);
+            this.dgvFrais.Location = new System.Drawing.Point(12, 162);
             this.dgvFrais.Name = "dgvFrais";
             this.dgvFrais.Size = new System.Drawing.Size(776, 357);
             this.dgvFrais.TabIndex = 2;
@@ -74,7 +76,7 @@ namespace AP3_HelloWorld
             // lblFicheFrais
             // 
             this.lblFicheFrais.AutoSize = true;
-            this.lblFicheFrais.Location = new System.Drawing.Point(12, 18);
+            this.lblFicheFrais.Location = new System.Drawing.Point(12, 96);
             this.lblFicheFrais.Name = "lblFicheFrais";
             this.lblFicheFrais.Size = new System.Drawing.Size(61, 13);
             this.lblFicheFrais.TabIndex = 3;
@@ -83,7 +85,7 @@ namespace AP3_HelloWorld
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(12, 46);
+            this.lblDate.Location = new System.Drawing.Point(12, 124);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(36, 13);
             this.lblDate.TabIndex = 4;
@@ -92,16 +94,31 @@ namespace AP3_HelloWorld
             // CbDate
             // 
             this.CbDate.FormattingEnabled = true;
-            this.CbDate.Location = new System.Drawing.Point(54, 43);
+            this.CbDate.Location = new System.Drawing.Point(54, 121);
             this.CbDate.Name = "CbDate";
             this.CbDate.Size = new System.Drawing.Size(121, 21);
             this.CbDate.TabIndex = 5;
+            // 
+            // bsVisiteur
+            // 
+            this.bsVisiteur.CurrentChanged += new System.EventHandler(this.bsVisiteur_CurrentChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AP3_HelloWorld.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(325, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // FM3MenuClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 488);
+            this.ClientSize = new System.Drawing.Size(831, 571);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CbDate);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblFicheFrais);
@@ -114,6 +131,7 @@ namespace AP3_HelloWorld
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFicheFrais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +147,6 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.ComboBox CbDate;
         private System.Windows.Forms.BindingSource bsVisiteur;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -19,20 +19,28 @@ namespace AP3_HelloWorld
 
         private void FM3MenuClient_Load(object sender, EventArgs e)
         {
-            //Chargement de l'utilisateur courant du Modele principal a mon modele
-            Visiteur V;
+            //Chargement de l'utilisateur courant du Modele principal à mon modele
             Modele3.UtilisateurConnecte = Modele.UtilisateurConnecte;
-            V = Modele3.UtilisateurConnecte;
-
-
-            bsFicheFrais.DataSource = Modele3.listefrais().Select (x=>new { x.idVisiteur, x.idEtat, x.mois, x.montantValide } );
-            dgvFrais.DataSource = bsFicheFrais;
+            //Dire a la binding source l'utilisateur présent
+            bsVisiteur.DataSource = Modele3.UtilisateurConnecte;
+           
         }
 
         private void btnAjoutF_Click(object sender, EventArgs e)
         {
             Form f = new FM3CliFrais();
             f.Show();
+        }
+
+        private void bsVisiteur_CurrentChanged(object sender, EventArgs e)
+        {
+            bsFicheFrais.DataSource = ((Visiteur)bsVisiteur.Current).fichefrais.Select(x => new {x.Etat.libelle, x.idVisiteur, x.montantValide, x.mois, x.nbJustificatifs });
+            dgvFrais.DataSource = bsFicheFrais;
+            dgvFrais.Columns[0].HeaderText = "ETAT";
+            dgvFrais.Columns[1].HeaderText = "IDVISITEUR";
+            dgvFrais.Columns[2].HeaderText = "MONTANT VALIDE";
+            dgvFrais.Columns[3].HeaderText = "MOIS / ANNEES";
+            dgvFrais.Columns[4].HeaderText = "N°Justification";
         }
     }
 }

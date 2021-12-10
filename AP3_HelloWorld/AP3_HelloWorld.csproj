@@ -84,23 +84,11 @@
     <Compile Include="FM3MenuClient.Designer.cs">
       <DependentUpon>FM3MenuClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="FMission1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FMission1.Designer.cs">
-      <DependentUpon>FMission1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FMission2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FMission2.Designer.cs">
       <DependentUpon>FMission2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FMission3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FMission3.Designer.cs">
-      <DependentUpon>FMission3.cs</DependentUpon>
     </Compile>
     <Compile Include="FMenu.cs">
       <SubType>Form</SubType>
@@ -177,14 +165,8 @@
     <EmbeddedResource Include="FM3MenuClient.resx">
       <DependentUpon>FM3MenuClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FMission1.resx">
-      <DependentUpon>FMission1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FMission2.resx">
       <DependentUpon>FMission2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FMission3.resx">
-      <DependentUpon>FMission3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>
