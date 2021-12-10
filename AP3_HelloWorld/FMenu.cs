@@ -22,15 +22,12 @@ namespace AP3_HelloWorld
             lblUtilConnecte.Text = "Bienvenue " + Modele.UtilisateurConnecte.prenom + " " + Modele.UtilisateurConnecte.nom;
         }
 
-        private void FMenu_Shown(object sender, EventArgs e)
-        {
-            //Form f = new FConnexion();
-            //f.Show();
-        }
+        private void FMenu_Shown(object sender, EventArgs e){}
 
         private void btnMission1_Click(object sender, EventArgs e)
         {
-            
+            Form f = new FM1RLab();
+            f.Show();
         }
 
         private void btnMission2_Click(object sender, EventArgs e)
