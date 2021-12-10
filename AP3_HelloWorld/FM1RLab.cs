@@ -116,17 +116,22 @@ namespace AP3_HelloWorld
                 }
             }
         }
-        /*private bool  verif()
-        {
-            bool vretour=true;
-            if(TBNom.TextLength<2)
-            {
-                errorProvider1.SetError(TBNom, "Le nom doit avoir au moins 2 car");
-                vretour = false;
 
-            }
-            return vretour;
-        }*/
+        private void secteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        /*private bool  verif()
+{
+   bool vretour=true;
+   if(TBNom.TextLength<2)
+   {
+       errorProvider1.SetError(TBNom, "Le nom doit avoir au moins 2 car");
+       vretour = false;
+
+   }
+   return vretour;
+}*/
 
     }
 }

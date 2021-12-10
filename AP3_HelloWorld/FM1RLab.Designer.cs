@@ -50,17 +50,20 @@ namespace AP3_HelloWorld
             this.textNouvMDP = new System.Windows.Forms.Label();
             this.BValider = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.BT = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGVInfPers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGVInfPers
             // 
             this.DGVInfPers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVInfPers.Location = new System.Drawing.Point(34, 30);
+            this.DGVInfPers.Location = new System.Drawing.Point(344, 342);
             this.DGVInfPers.Name = "DGVInfPers";
-            this.DGVInfPers.Size = new System.Drawing.Size(569, 397);
+            this.DGVInfPers.Size = new System.Drawing.Size(237, 96);
             this.DGVInfPers.TabIndex = 0;
             this.DGVInfPers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInfPers_CellContentClick);
             // 
@@ -140,7 +143,6 @@ namespace AP3_HelloWorld
             this.TBNom.Name = "TBNom";
             this.TBNom.Size = new System.Drawing.Size(75, 20);
             this.TBNom.TabIndex = 8;
-
             // 
             // TBPrenom
             // 
@@ -217,6 +219,23 @@ namespace AP3_HelloWorld
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BT});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // BT
+            // 
+            this.BT.Name = "BT";
+            this.BT.Size = new System.Drawing.Size(61, 20);
+            this.BT.Text = "Régions";
+            this.BT.Click += new System.EventHandler(this.secteursToolStripMenuItem_Click);
+            // 
             // FM1RLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,12 +259,16 @@ namespace AP3_HelloWorld
             this.Controls.Add(this.ModMDP);
             this.Controls.Add(this.InfoPers);
             this.Controls.Add(this.DGVInfPers);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FM1RLab";
             this.Text = "Mission 1";
             this.Load += new System.EventHandler(this.FM1RLab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVInfPers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +296,7 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.Label textNouvMDP;
         private System.Windows.Forms.Button BValider;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem BT;
     }
 }
