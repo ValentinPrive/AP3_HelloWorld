@@ -52,6 +52,9 @@ namespace AP3_HelloWorld
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BT = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVInfPers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -61,9 +64,9 @@ namespace AP3_HelloWorld
             // DGVInfPers
             // 
             this.DGVInfPers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVInfPers.Location = new System.Drawing.Point(344, 342);
+            this.DGVInfPers.Location = new System.Drawing.Point(12, 56);
             this.DGVInfPers.Name = "DGVInfPers";
-            this.DGVInfPers.Size = new System.Drawing.Size(237, 96);
+            this.DGVInfPers.Size = new System.Drawing.Size(591, 368);
             this.DGVInfPers.TabIndex = 0;
             this.DGVInfPers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInfPers_CellContentClick);
             // 
@@ -207,7 +210,7 @@ namespace AP3_HelloWorld
             // 
             // BValider
             // 
-            this.BValider.Location = new System.Drawing.Point(665, 387);
+            this.BValider.Location = new System.Drawing.Point(665, 401);
             this.BValider.Name = "BValider";
             this.BValider.Size = new System.Drawing.Size(75, 23);
             this.BValider.TabIndex = 17;
@@ -236,11 +239,41 @@ namespace AP3_HelloWorld
             this.BT.Text = "Régions";
             this.BT.Click += new System.EventHandler(this.secteursToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(37, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Consulter ses responsabilités";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(194, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Budget";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(275, 27);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Visiteurs";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // FM1RLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BValider);
             this.Controls.Add(this.textNouvMDP);
             this.Controls.Add(this.textAncMDP);
@@ -298,5 +331,8 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem BT;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
