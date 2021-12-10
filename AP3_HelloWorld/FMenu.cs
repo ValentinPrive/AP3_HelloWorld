@@ -19,7 +19,7 @@ namespace AP3_HelloWorld
 
         private void FMenu_Load(object sender, EventArgs e)
         {
-            lblUtilConnecte.Text = "Utilisateur connecté : " + Modele.UtilisateurConnecte.nom + Modele.UtilisateurConnecte.prenom;
+            lblUtilConnecte.Text = "Bienvenue " + Modele.UtilisateurConnecte.prenom + " " + Modele.UtilisateurConnecte.nom;
         }
 
         private void FMenu_Shown(object sender, EventArgs e)
