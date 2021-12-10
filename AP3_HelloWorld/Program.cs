@@ -18,6 +18,7 @@ namespace AP3_HelloWorld
             Application.SetCompatibleTextRenderingDefault(false);
             Modele.init();
             Modele3.init();
+            Modele2.init();
             Application.Run(new FConnexion());
         }
     }
