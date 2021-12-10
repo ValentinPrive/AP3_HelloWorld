@@ -19,7 +19,7 @@ namespace AP3_HelloWorld
 
         private void FMenu_Load(object sender, EventArgs e)
         {
-            lblUtilConnecte.Text = "Utilisateur connecté : " + Modele.UtilisateurConnecte.nom + Modele.UtilisateurConnecte.prenom;
+            lblUtilConnecte.Text = "Utilisateur connecté : " + Modele.UtilisateurConnecte.nom + " " + Modele.UtilisateurConnecte.prenom;
         }
 
         private void FMenu_Shown(object sender, EventArgs e)
@@ -30,7 +30,8 @@ namespace AP3_HelloWorld
 
         private void btnMission1_Click(object sender, EventArgs e)
         {
-            
+            Form f = new FM1RLab();
+            f.Show();
         }
 
         private void btnMission2_Click(object sender, EventArgs e)
