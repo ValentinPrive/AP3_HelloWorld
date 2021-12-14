@@ -12,6 +12,7 @@ namespace AP3_HelloWorld
 {
     public partial class FM1RLab : Form
     {
+        private static Visiteur RespLabo;
         public FM1RLab()
         {
             InitializeComponent();
@@ -48,16 +49,8 @@ namespace AP3_HelloWorld
             Ville.Visible = true;
             TBVille.Visible = true;
         }
+        
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DGVInfPers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void ModMDP_Click(object sender, EventArgs e)
         {
@@ -121,16 +114,30 @@ namespace AP3_HelloWorld
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public static Visiteur RespLabo { get => RespLabo; set => RespLabo = value; }
+
+        
+        RespLabo = maConnexion.Visiteur.Where(x => x.identifiant == id).ToList()[0];
+
+
+
+
         /*private bool  verif()
 {
-   bool vretour=true;
-   if(TBNom.TextLength<2)
-   {
-       errorProvider1.SetError(TBNom, "Le nom doit avoir au moins 2 car");
-       vretour = false;
+bool vretour=true;
+if(TBNom.TextLength<2)
+{
+errorProvider1.SetError(TBNom, "Le nom doit avoir au moins 2 car");
+vretour = false;
 
-   }
-   return vretour;
+}
+return vretour;
 }*/
 
     }

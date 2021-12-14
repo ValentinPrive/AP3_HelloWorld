@@ -42,5 +42,9 @@ namespace AP3_HelloWorld
             f.Show();
         }
 
+        private void lblUtilConnecte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

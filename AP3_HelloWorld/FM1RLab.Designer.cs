@@ -52,9 +52,8 @@ namespace AP3_HelloWorld
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BT = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Resp = new System.Windows.Forms.Label();
+            this.Labo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVInfPers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -68,7 +67,6 @@ namespace AP3_HelloWorld
             this.DGVInfPers.Name = "DGVInfPers";
             this.DGVInfPers.Size = new System.Drawing.Size(591, 368);
             this.DGVInfPers.TabIndex = 0;
-            this.DGVInfPers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInfPers_CellContentClick);
             // 
             // InfoPers
             // 
@@ -80,10 +78,6 @@ namespace AP3_HelloWorld
             this.InfoPers.Text = "Informations personnelles";
             this.InfoPers.UseVisualStyleBackColor = true;
             this.InfoPers.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // ModMDP
             // 
@@ -239,41 +233,32 @@ namespace AP3_HelloWorld
             this.BT.Text = "Régions";
             this.BT.Click += new System.EventHandler(this.secteursToolStripMenuItem_Click);
             // 
-            // button1
+            // Resp
             // 
-            this.button1.Location = new System.Drawing.Point(37, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Consulter ses responsabilités";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Resp.AutoSize = true;
+            this.Resp.Location = new System.Drawing.Point(13, 28);
+            this.Resp.Name = "Resp";
+            this.Resp.Size = new System.Drawing.Size(82, 13);
+            this.Resp.TabIndex = 19;
+            this.Resp.Text = "Responsabilité :";
             // 
-            // button2
+            // Labo
             // 
-            this.button2.Location = new System.Drawing.Point(194, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Budget";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(275, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Visiteurs";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Labo.AutoSize = true;
+            this.Labo.Location = new System.Drawing.Point(241, 28);
+            this.Labo.Name = "Labo";
+            this.Labo.Size = new System.Drawing.Size(66, 13);
+            this.Labo.TabIndex = 20;
+            this.Labo.Text = "Laboratoire :";
+            this.Labo.Click += new System.EventHandler(this.label1_Click);
             // 
             // FM1RLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Labo);
+            this.Controls.Add(this.Resp);
             this.Controls.Add(this.BValider);
             this.Controls.Add(this.textNouvMDP);
             this.Controls.Add(this.textAncMDP);
@@ -331,8 +316,7 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem BT;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Labo;
+        private System.Windows.Forms.Label Resp;
     }
 }
