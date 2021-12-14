@@ -53,5 +53,10 @@ namespace AP3_HelloWorld
             dgvRapports.Columns[3].HeaderText = "Motif de la visite";
             dgvRapports.Columns[4].HeaderText = "Bilan";
         }
+
+        private void cboMedecin_Format(object sender, ListControlConvertEventArgs e)
+        {
+            e.Value = ((MEDECIN)e.ListItem).nom.Trim() + " " + ((MEDECIN)e.ListItem).prenom.Trim();
+        }
     }
 }

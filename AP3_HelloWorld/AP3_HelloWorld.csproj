@@ -60,6 +60,12 @@
     <Compile Include="Etat.cs">
       <DependentUpon>mdlGSB.tt</DependentUpon>
     </Compile>
+    <Compile Include="FAjoutModifRapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAjoutModifRapport.Designer.cs">
+      <DependentUpon>FAjoutModifRapport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlGSB.tt</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlGSB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FAjoutModifRapport.resx">
+      <DependentUpon>FAjoutModifRapport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FConnexion.resx">
       <DependentUpon>FConnexion.cs</DependentUpon>
     </EmbeddedResource>

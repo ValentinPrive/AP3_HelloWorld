@@ -30,33 +30,23 @@ namespace AP3_HelloWorld
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblTitre = new System.Windows.Forms.Label();
             this.pnlTitre = new System.Windows.Forms.Panel();
             this.lblMedecin = new System.Windows.Forms.Label();
-            this.bsMedecin = new System.Windows.Forms.BindingSource(this.components);
             this.cboMedecin = new System.Windows.Forms.ComboBox();
-            this.bsRapports = new System.Windows.Forms.BindingSource(this.components);
             this.dgvRapports = new System.Windows.Forms.DataGridView();
             this.btnTousMedecins = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.btnAjoutRapport = new System.Windows.Forms.Button();
+            this.btnModifRapport = new System.Windows.Forms.Button();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.bsMedecin = new System.Windows.Forms.BindingSource(this.components);
+            this.bsRapports = new System.Windows.Forms.BindingSource(this.components);
             this.pnlTitre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRapports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMedecin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapports)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRapports)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbLogo.Image = global::AP3_HelloWorld.Properties.Resources.logo;
-            this.pbLogo.Location = new System.Drawing.Point(334, 12);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(135, 91);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 3;
-            this.pbLogo.TabStop = false;
             // 
             // lblTitre
             // 
@@ -92,10 +82,6 @@ namespace AP3_HelloWorld
             this.lblMedecin.TabIndex = 4;
             this.lblMedecin.Text = "Médecin :";
             // 
-            // bsMedecin
-            // 
-            this.bsMedecin.CurrentChanged += new System.EventHandler(this.bsMedecin_CurrentChanged);
-            // 
             // cboMedecin
             // 
             this.cboMedecin.FormattingEnabled = true;
@@ -104,6 +90,7 @@ namespace AP3_HelloWorld
             this.cboMedecin.Size = new System.Drawing.Size(121, 21);
             this.cboMedecin.TabIndex = 5;
             this.cboMedecin.SelectedIndexChanged += new System.EventHandler(this.cboMedecin_SelectedIndexChanged);
+            this.cboMedecin.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboMedecin_Format);
             // 
             // dgvRapports
             // 
@@ -114,7 +101,7 @@ namespace AP3_HelloWorld
             this.dgvRapports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRapports.Location = new System.Drawing.Point(15, 207);
             this.dgvRapports.Name = "dgvRapports";
-            this.dgvRapports.Size = new System.Drawing.Size(773, 231);
+            this.dgvRapports.Size = new System.Drawing.Size(773, 202);
             this.dgvRapports.TabIndex = 6;
             // 
             // btnTousMedecins
@@ -128,11 +115,49 @@ namespace AP3_HelloWorld
             this.btnTousMedecins.UseVisualStyleBackColor = true;
             this.btnTousMedecins.Click += new System.EventHandler(this.btnTousMedecins_Click);
             // 
+            // btnAjoutRapport
+            // 
+            this.btnAjoutRapport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAjoutRapport.Location = new System.Drawing.Point(15, 416);
+            this.btnAjoutRapport.Name = "btnAjoutRapport";
+            this.btnAjoutRapport.Size = new System.Drawing.Size(144, 23);
+            this.btnAjoutRapport.TabIndex = 8;
+            this.btnAjoutRapport.Text = "Ajouter un nouveau rapport";
+            this.btnAjoutRapport.UseVisualStyleBackColor = true;
+            // 
+            // btnModifRapport
+            // 
+            this.btnModifRapport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnModifRapport.Location = new System.Drawing.Point(165, 416);
+            this.btnModifRapport.Name = "btnModifRapport";
+            this.btnModifRapport.Size = new System.Drawing.Size(103, 23);
+            this.btnModifRapport.TabIndex = 9;
+            this.btnModifRapport.Text = "Modifier ce rapport";
+            this.btnModifRapport.UseVisualStyleBackColor = true;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbLogo.Image = global::AP3_HelloWorld.Properties.Resources.logo;
+            this.pbLogo.Location = new System.Drawing.Point(334, 12);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(135, 91);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 3;
+            this.pbLogo.TabStop = false;
+            // 
+            // bsMedecin
+            // 
+            this.bsMedecin.CurrentChanged += new System.EventHandler(this.bsMedecin_CurrentChanged);
+            // 
             // FMission2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnModifRapport);
+            this.Controls.Add(this.btnAjoutRapport);
             this.Controls.Add(this.btnTousMedecins);
             this.Controls.Add(this.dgvRapports);
             this.Controls.Add(this.cboMedecin);
@@ -142,12 +167,12 @@ namespace AP3_HelloWorld
             this.Name = "FMission2";
             this.Text = "Rapports de visite";
             this.Load += new System.EventHandler(this.FMission2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnlTitre.ResumeLayout(false);
             this.pnlTitre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRapports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMedecin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapports)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRapports)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +189,7 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.BindingSource bsRapports;
         private System.Windows.Forms.DataGridView dgvRapports;
         private System.Windows.Forms.Button btnTousMedecins;
+        private System.Windows.Forms.Button btnAjoutRapport;
+        private System.Windows.Forms.Button btnModifRapport;
     }
 }
