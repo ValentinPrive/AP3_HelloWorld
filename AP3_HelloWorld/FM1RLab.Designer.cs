@@ -16,7 +16,7 @@ namespace AP3_HelloWorld
         {
             if (disposing && (components != null))
             {
-                components.Dispose();
+                components.Dispose(); 
             }
             base.Dispose(disposing);
         }

@@ -13,7 +13,7 @@ namespace AP3_HelloWorld
     public static class Modele
     {
         private static connectGSB1 maConnexion;
-        private static Visiteur utilisateurConnecte;
+        private static Visiteur utilisateurConnecte; 
         private static bool connexionValide;
 
         public static Visiteur UtilisateurConnecte { get => utilisateurConnecte; set => utilisateurConnecte = value; }

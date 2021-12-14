@@ -57,7 +57,7 @@ namespace AP3_HelloWorld
             ancMDP.Visible = true;
             nouvMDP.Visible = true;
             textAncMDP.Visible = true;
-            textNouvMDP.Visible = true;
+            textNouvMDP.Visible = true; 
             BValider.Visible = true;
         }
 
