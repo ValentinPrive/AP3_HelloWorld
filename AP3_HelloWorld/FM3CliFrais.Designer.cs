@@ -32,7 +32,6 @@ namespace AP3_HelloWorld
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblFicheFrais = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblVisiteur = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNomVisiteur = new System.Windows.Forms.Label();
@@ -49,17 +48,19 @@ namespace AP3_HelloWorld
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtQNuitee = new System.Windows.Forms.TextBox();
+            this.txtQRPM = new System.Windows.Forms.TextBox();
+            this.txtQKilo = new System.Windows.Forms.TextBox();
             this.txtMNuitée = new System.Windows.Forms.TextBox();
             this.txtRepas = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.txtKilometrage = new System.Windows.Forms.TextBox();
-            this.bsFrais = new System.Windows.Forms.BindingSource(this.components);
+            this.txtKillometrage = new System.Windows.Forms.TextBox();
+            this.txtTN = new System.Windows.Forms.TextBox();
+            this.txtTRPM = new System.Windows.Forms.TextBox();
+            this.txtTKilo = new System.Windows.Forms.TextBox();
             this.cbokilométrage = new System.Windows.Forms.ComboBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bsFrais = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFrais)).BeginInit();
@@ -87,16 +88,6 @@ namespace AP3_HelloWorld
             this.lblFicheFrais.Size = new System.Drawing.Size(119, 25);
             this.lblFicheFrais.TabIndex = 0;
             this.lblFicheFrais.Text = "Fiche Frais";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AP3_HelloWorld.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(340, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lblVisiteur
             // 
@@ -204,12 +195,13 @@ namespace AP3_HelloWorld
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(661, 536);
+            this.btnOK.Location = new System.Drawing.Point(635, 536);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 15;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = "Ajouter";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label6
             // 
@@ -266,29 +258,32 @@ namespace AP3_HelloWorld
             this.label9.TabIndex = 20;
             this.label9.Text = "Kilométrage";
             // 
-            // textBox1
+            // txtQNuitee
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(193, 307);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(84, 26);
-            this.textBox1.TabIndex = 21;
+            this.txtQNuitee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtQNuitee.Location = new System.Drawing.Point(193, 307);
+            this.txtQNuitee.Name = "txtQNuitee";
+            this.txtQNuitee.Size = new System.Drawing.Size(84, 26);
+            this.txtQNuitee.TabIndex = 21;
+            this.txtQNuitee.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtQRPM
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(193, 339);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(84, 26);
-            this.textBox2.TabIndex = 22;
+            this.txtQRPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtQRPM.Location = new System.Drawing.Point(193, 339);
+            this.txtQRPM.Name = "txtQRPM";
+            this.txtQRPM.Size = new System.Drawing.Size(84, 26);
+            this.txtQRPM.TabIndex = 22;
+            this.txtQRPM.TextChanged += new System.EventHandler(this.txtQRPM_TextChanged);
             // 
-            // textBox3
+            // txtQKilo
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(193, 401);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(84, 26);
-            this.textBox3.TabIndex = 23;
+            this.txtQKilo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtQKilo.Location = new System.Drawing.Point(193, 401);
+            this.txtQKilo.Name = "txtQKilo";
+            this.txtQKilo.Size = new System.Drawing.Size(84, 26);
+            this.txtQKilo.TabIndex = 23;
+            this.txtQKilo.TextChanged += new System.EventHandler(this.txtQKilo_TextChanged);
             // 
             // txtMNuitée
             // 
@@ -310,46 +305,45 @@ namespace AP3_HelloWorld
             this.txtRepas.TabIndex = 25;
             this.txtRepas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox6
+            // txtKillometrage
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(316, 401);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(136, 26);
-            this.textBox6.TabIndex = 26;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtKillometrage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtKillometrage.Location = new System.Drawing.Point(316, 401);
+            this.txtKillometrage.Name = "txtKillometrage";
+            this.txtKillometrage.ReadOnly = true;
+            this.txtKillometrage.Size = new System.Drawing.Size(136, 26);
+            this.txtKillometrage.TabIndex = 26;
+            this.txtKillometrage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox7
+            // txtTN
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(482, 304);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(97, 26);
-            this.textBox7.TabIndex = 27;
+            this.txtTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTN.Location = new System.Drawing.Point(482, 304);
+            this.txtTN.Name = "txtTN";
+            this.txtTN.ReadOnly = true;
+            this.txtTN.Size = new System.Drawing.Size(97, 26);
+            this.txtTN.TabIndex = 27;
+            this.txtTN.TextChanged += new System.EventHandler(this.txtTN_TextChanged);
             // 
-            // textBox8
+            // txtTRPM
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.Location = new System.Drawing.Point(482, 340);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(97, 26);
-            this.textBox8.TabIndex = 28;
+            this.txtTRPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTRPM.Location = new System.Drawing.Point(482, 340);
+            this.txtTRPM.Name = "txtTRPM";
+            this.txtTRPM.ReadOnly = true;
+            this.txtTRPM.Size = new System.Drawing.Size(97, 26);
+            this.txtTRPM.TabIndex = 28;
+            this.txtTRPM.TextChanged += new System.EventHandler(this.txtTN_TextChanged);
             // 
-            // txtKilometrage
+            // txtTKilo
             // 
-            this.txtKilometrage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtKilometrage.Location = new System.Drawing.Point(482, 401);
-            this.txtKilometrage.Name = "txtKilometrage";
-            this.txtKilometrage.ReadOnly = true;
-            this.txtKilometrage.Size = new System.Drawing.Size(97, 26);
-            this.txtKilometrage.TabIndex = 29;
-            // 
-            // bsFrais
-            // 
-            this.bsFrais.CurrentChanged += new System.EventHandler(this.bsFrais_CurrentChanged);
+            this.txtTKilo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTKilo.Location = new System.Drawing.Point(482, 401);
+            this.txtTKilo.Name = "txtTKilo";
+            this.txtTKilo.ReadOnly = true;
+            this.txtTKilo.Size = new System.Drawing.Size(97, 26);
+            this.txtTKilo.TabIndex = 29;
+            this.txtTKilo.TextChanged += new System.EventHandler(this.txtTN_TextChanged);
             // 
             // cbokilométrage
             // 
@@ -359,21 +353,45 @@ namespace AP3_HelloWorld
             this.cbokilométrage.Size = new System.Drawing.Size(94, 21);
             this.cbokilométrage.TabIndex = 30;
             // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox4.Location = new System.Drawing.Point(482, 449);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(97, 26);
+            this.textBox4.TabIndex = 31;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AP3_HelloWorld.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(340, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bsFrais
+            // 
+            this.bsFrais.CurrentChanged += new System.EventHandler(this.bsFrais_CurrentChanged);
+            // 
             // FM3CliFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 571);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.cbokilométrage);
-            this.Controls.Add(this.txtKilometrage);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtTKilo);
+            this.Controls.Add(this.txtTRPM);
+            this.Controls.Add(this.txtTN);
+            this.Controls.Add(this.txtKillometrage);
             this.Controls.Add(this.txtRepas);
             this.Controls.Add(this.txtMNuitée);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQKilo);
+            this.Controls.Add(this.txtQRPM);
+            this.Controls.Add(this.txtQNuitee);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -426,16 +444,17 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtQNuitee;
+        private System.Windows.Forms.TextBox txtQRPM;
+        private System.Windows.Forms.TextBox txtQKilo;
         private System.Windows.Forms.TextBox txtMNuitée;
         private System.Windows.Forms.TextBox txtRepas;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox txtKilometrage;
+        private System.Windows.Forms.TextBox txtKillometrage;
+        private System.Windows.Forms.TextBox txtTN;
+        private System.Windows.Forms.TextBox txtTRPM;
+        private System.Windows.Forms.TextBox txtTKilo;
         private System.Windows.Forms.BindingSource bsFrais;
         private System.Windows.Forms.ComboBox cbokilométrage;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

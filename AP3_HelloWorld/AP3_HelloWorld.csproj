@@ -72,6 +72,12 @@
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlGSB.tt</DependentUpon>
     </Compile>
+    <Compile Include="FM1RLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM1RLab.Designer.cs">
+      <DependentUpon>FM1RLab.cs</DependentUpon>
+    </Compile>
     <Compile Include="FM3CliFrais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="FConnexion.resx">
       <DependentUpon>FConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM1RLab.resx">
+      <DependentUpon>FM1RLab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FM3CliFrais.resx">
       <DependentUpon>FM3CliFrais.cs</DependentUpon>
