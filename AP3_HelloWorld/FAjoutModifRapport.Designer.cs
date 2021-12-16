@@ -29,12 +29,13 @@ namespace AP3_HelloWorld
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.idDateVisite = new System.Windows.Forms.Label();
             this.cboMotif = new System.Windows.Forms.ComboBox();
             this.lblMotif = new System.Windows.Forms.Label();
             this.txtBilan = new System.Windows.Forms.TextBox();
             this.lblBilan = new System.Windows.Forms.Label();
-            this.cbMedecin = new System.Windows.Forms.ComboBox();
+            this.cboMedecin = new System.Windows.Forms.ComboBox();
             this.lblMedecin = new System.Windows.Forms.Label();
             this.clbMedicamentsPresentes = new System.Windows.Forms.CheckedListBox();
             this.dtpDateVisite = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +44,10 @@ namespace AP3_HelloWorld
             this.lblMedicamentsOfferts = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
+            this.bsMedecin = new System.Windows.Forms.BindingSource(this.components);
+            this.bsMotif = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bsMedecin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMotif)).BeginInit();
             this.SuspendLayout();
             // 
             // idDateVisite
@@ -91,13 +96,14 @@ namespace AP3_HelloWorld
             this.lblBilan.TabIndex = 5;
             this.lblBilan.Text = "Bilan :";
             // 
-            // cbMedecin
+            // cboMedecin
             // 
-            this.cbMedecin.FormattingEnabled = true;
-            this.cbMedecin.Location = new System.Drawing.Point(144, 12);
-            this.cbMedecin.Name = "cbMedecin";
-            this.cbMedecin.Size = new System.Drawing.Size(200, 21);
-            this.cbMedecin.TabIndex = 6;
+            this.cboMedecin.FormattingEnabled = true;
+            this.cboMedecin.Location = new System.Drawing.Point(144, 12);
+            this.cboMedecin.Name = "cboMedecin";
+            this.cboMedecin.Size = new System.Drawing.Size(200, 21);
+            this.cboMedecin.TabIndex = 6;
+            this.cboMedecin.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboMedecin_Format);
             // 
             // lblMedecin
             // 
@@ -113,7 +119,7 @@ namespace AP3_HelloWorld
             this.clbMedicamentsPresentes.FormattingEnabled = true;
             this.clbMedicamentsPresentes.Location = new System.Drawing.Point(144, 184);
             this.clbMedicamentsPresentes.Name = "clbMedicamentsPresentes";
-            this.clbMedicamentsPresentes.Size = new System.Drawing.Size(200, 94);
+            this.clbMedicamentsPresentes.Size = new System.Drawing.Size(200, 184);
             this.clbMedicamentsPresentes.TabIndex = 8;
             // 
             // dtpDateVisite
@@ -136,15 +142,15 @@ namespace AP3_HelloWorld
             // clbMedicamentsOfferts
             // 
             this.clbMedicamentsOfferts.FormattingEnabled = true;
-            this.clbMedicamentsOfferts.Location = new System.Drawing.Point(144, 285);
+            this.clbMedicamentsOfferts.Location = new System.Drawing.Point(464, 184);
             this.clbMedicamentsOfferts.Name = "clbMedicamentsOfferts";
-            this.clbMedicamentsOfferts.Size = new System.Drawing.Size(200, 94);
+            this.clbMedicamentsOfferts.Size = new System.Drawing.Size(200, 184);
             this.clbMedicamentsOfferts.TabIndex = 11;
             // 
             // lblMedicamentsOfferts
             // 
             this.lblMedicamentsOfferts.AutoSize = true;
-            this.lblMedicamentsOfferts.Location = new System.Drawing.Point(13, 285);
+            this.lblMedicamentsOfferts.Location = new System.Drawing.Point(350, 186);
             this.lblMedicamentsOfferts.Name = "lblMedicamentsOfferts";
             this.lblMedicamentsOfferts.Size = new System.Drawing.Size(108, 13);
             this.lblMedicamentsOfferts.TabIndex = 12;
@@ -168,6 +174,7 @@ namespace AP3_HelloWorld
             this.btnAnnuler.TabIndex = 14;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // FAjoutModifRapport
             // 
@@ -184,13 +191,16 @@ namespace AP3_HelloWorld
             this.Controls.Add(this.dtpDateVisite);
             this.Controls.Add(this.clbMedicamentsPresentes);
             this.Controls.Add(this.lblMedecin);
-            this.Controls.Add(this.cbMedecin);
+            this.Controls.Add(this.cboMedecin);
             this.Controls.Add(this.lblBilan);
             this.Controls.Add(this.txtBilan);
             this.Controls.Add(this.lblMotif);
             this.Controls.Add(this.cboMotif);
             this.Controls.Add(this.idDateVisite);
             this.Name = "FAjoutModifRapport";
+            this.Load += new System.EventHandler(this.FAjoutModifRapport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bsMedecin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +213,7 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.Label lblMotif;
         private System.Windows.Forms.TextBox txtBilan;
         private System.Windows.Forms.Label lblBilan;
-        private System.Windows.Forms.ComboBox cbMedecin;
+        private System.Windows.Forms.ComboBox cboMedecin;
         private System.Windows.Forms.Label lblMedecin;
         private System.Windows.Forms.CheckedListBox clbMedicamentsPresentes;
         private System.Windows.Forms.DateTimePicker dtpDateVisite;
@@ -212,5 +222,7 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.Label lblMedicamentsOfferts;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.BindingSource bsMedecin;
+        private System.Windows.Forms.BindingSource bsMotif;
     }
 }

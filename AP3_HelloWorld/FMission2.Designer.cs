@@ -124,6 +124,7 @@ namespace AP3_HelloWorld
             this.btnAjoutRapport.TabIndex = 8;
             this.btnAjoutRapport.Text = "Ajouter un nouveau rapport";
             this.btnAjoutRapport.UseVisualStyleBackColor = true;
+            this.btnAjoutRapport.Click += new System.EventHandler(this.btnAjoutRapport_Click);
             // 
             // btnModifRapport
             // 
@@ -134,6 +135,7 @@ namespace AP3_HelloWorld
             this.btnModifRapport.TabIndex = 9;
             this.btnModifRapport.Text = "Modifier ce rapport";
             this.btnModifRapport.UseVisualStyleBackColor = true;
+            this.btnModifRapport.Click += new System.EventHandler(this.btnModifRapport_Click);
             // 
             // pbLogo
             // 

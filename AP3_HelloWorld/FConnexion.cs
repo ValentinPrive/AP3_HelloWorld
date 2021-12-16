@@ -24,7 +24,7 @@ namespace AP3_HelloWorld
             {
                 if (Modele.mdpVerif(txtMdp.Text))
                 {
-                    MessageBox.Show("Identification réussi");
+                    MessageBox.Show("Identification réussie");
                     System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(threadProc));
                     x.Start();
                     this.Close();

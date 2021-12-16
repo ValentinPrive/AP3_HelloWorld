@@ -12,7 +12,6 @@ namespace AP3_HelloWorld
 {
     public partial class FM1RLab : Form
     {
-        private static Visiteur RespLabo;
         public FM1RLab()
         {
             InitializeComponent();
@@ -119,11 +118,6 @@ namespace AP3_HelloWorld
         {
 
         }
-
-        public static Visiteur RespLabo { get => RespLabo; set => RespLabo = value; }
-
-        
-        RespLabo = maConnexion.Visiteur.Where(x => x.identifiant == id).ToList()[0];
 
 
 

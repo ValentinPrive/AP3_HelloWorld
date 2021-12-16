@@ -28,7 +28,6 @@ namespace AP3_HelloWorld
         private void FM3CliFrais_Load(object sender, EventArgs e)
         {
             Visiteur V;
-            List<>
             Modele.UtilisateurConnecte = Modele3.UtilisateurConnecte;
             V = Modele3.UtilisateurConnecte;
             //Dit quel utilisateur se connecte
@@ -53,7 +52,7 @@ namespace AP3_HelloWorld
 
         private void bsFrais_CurrentChanged(object sender, EventArgs e)
         {
-            txtKilometrage
+            
         }
     }
 }
