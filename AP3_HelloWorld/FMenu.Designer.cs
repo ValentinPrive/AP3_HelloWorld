@@ -46,34 +46,35 @@ namespace AP3_HelloWorld
             this.lblUtilConnecte.Size = new System.Drawing.Size(133, 13);
             this.lblUtilConnecte.TabIndex = 0;
             this.lblUtilConnecte.Text = "Aucun utilisateur connecté";
+            this.lblUtilConnecte.Click += new System.EventHandler(this.lblUtilConnecte_Click);
             // 
             // btnMission1
             // 
-            this.btnMission1.Location = new System.Drawing.Point(16, 67);
+            this.btnMission1.Location = new System.Drawing.Point(277, 119);
             this.btnMission1.Name = "btnMission1";
-            this.btnMission1.Size = new System.Drawing.Size(75, 23);
+            this.btnMission1.Size = new System.Drawing.Size(212, 23);
             this.btnMission1.TabIndex = 1;
-            this.btnMission1.Text = "Mission 1";
+            this.btnMission1.Text = "Gestion des visiteurs, secteurs et régions";
             this.btnMission1.UseVisualStyleBackColor = true;
             this.btnMission1.Click += new System.EventHandler(this.btnMission1_Click);
             // 
             // btnMission2
             // 
-            this.btnMission2.Location = new System.Drawing.Point(16, 126);
+            this.btnMission2.Location = new System.Drawing.Point(303, 230);
             this.btnMission2.Name = "btnMission2";
-            this.btnMission2.Size = new System.Drawing.Size(75, 23);
+            this.btnMission2.Size = new System.Drawing.Size(163, 23);
             this.btnMission2.TabIndex = 2;
-            this.btnMission2.Text = "Mission 2";
+            this.btnMission2.Text = "Gestion des rapports de visite";
             this.btnMission2.UseVisualStyleBackColor = true;
             this.btnMission2.Click += new System.EventHandler(this.btnMission2_Click);
             // 
             // btnMission3
             // 
-            this.btnMission3.Location = new System.Drawing.Point(16, 187);
+            this.btnMission3.Location = new System.Drawing.Point(303, 337);
             this.btnMission3.Name = "btnMission3";
-            this.btnMission3.Size = new System.Drawing.Size(75, 23);
+            this.btnMission3.Size = new System.Drawing.Size(163, 23);
             this.btnMission3.TabIndex = 3;
-            this.btnMission3.Text = "Mission 3";
+            this.btnMission3.Text = "Gestion des remboursements";
             this.btnMission3.UseVisualStyleBackColor = true;
             this.btnMission3.Click += new System.EventHandler(this.btnMission3_Click);
             // 

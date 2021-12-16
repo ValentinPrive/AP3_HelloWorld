@@ -34,14 +34,14 @@ namespace AP3_HelloWorld
 
         private void bsMedecin_CurrentChanged(object sender, EventArgs e)
         {
-            bsRapports.DataSource = ((MEDECIN)bsMedecin.Current).RAPPORT.Where(x => x.idVisiteur == Modele.UtilisateurConnecte.idVisiteur).Select(x => new { x.idRapport, x.dateRapport, x.MOTIF.libMotif, x.bilan, x.Visiteur.nom, nomMedecin=x.MEDECIN.nom  }).OrderBy(x => x.dateRapport).ToList();
+            bsRapports.DataSource = ((MEDECIN)bsMedecin.Current).RAPPORT.Where(x => x.idVisiteur == Modele.UtilisateurConnecte.idVisiteur).Select(x => new { x.idRapport, x.dateRapport, nomMedecin=x.MEDECIN.nom, x.MEDECIN.prenom, x.MOTIF.libMotif, x.bilan }).OrderBy(x => x.dateRapport).ToList();
             dgvRapports.DataSource = bsRapports;
             dgvRapports.Columns[0].HeaderText = "Numéro du rapport";
             dgvRapports.Columns[1].HeaderText = "Date du rapport";
-            dgvRapports.Columns[2].HeaderText = "Motif de la visite";
-            dgvRapports.Columns[3].HeaderText = "Bilan";
-            dgvRapports.Columns[4].HeaderText = "Visiteur";
-            dgvRapports.Columns[5].HeaderText = "Médecin";
+            dgvRapports.Columns[2].HeaderText = "Nom du médecin";
+            dgvRapports.Columns[3].HeaderText = "Prénom du médecin";
+            dgvRapports.Columns[4].HeaderText = "Motif de la visite";
+            dgvRapports.Columns[5].HeaderText = "Bilan";
         }
 
         private void btnTousMedecins_Click(object sender, EventArgs e)
@@ -50,10 +50,32 @@ namespace AP3_HelloWorld
             dgvRapports.DataSource = bsRapports;
             dgvRapports.Columns[0].HeaderText = "Numéro du rapport";
             dgvRapports.Columns[1].HeaderText = "Date du rapport";
-            dgvRapports.Columns[2].HeaderText = "Motif de la visite";
-            dgvRapports.Columns[3].HeaderText = "Bilan";
-            dgvRapports.Columns[4].HeaderText = "Visiteur";
-            dgvRapports.Columns[5].HeaderText = "Médecin";
+            dgvRapports.Columns[2].HeaderText = "Nom du médecin";
+            dgvRapports.Columns[3].HeaderText = "Prénom du médecin";
+            dgvRapports.Columns[4].HeaderText = "Motif de la visite";
+            dgvRapports.Columns[5].HeaderText = "Bilan";
+        }
+
+        private void cboMedecin_Format(object sender, ListControlConvertEventArgs e)
+        {
+            e.Value = ((MEDECIN)e.ListItem).nom.Trim() + " " + ((MEDECIN)e.ListItem).prenom.Trim();
+        }
+
+        private void btnAjoutRapport_Click(object sender, EventArgs e)
+        {
+            Modele2.actionGestionRapport = 1;
+            Form f = new FAjoutModifRapport();
+            f.Show();
+        }
+
+        private void btnModifRapport_Click(object sender, EventArgs e)
+        {
+            Modele2.actionGestionRapport = 2;
+            System.Type type = bsRapports.Current.GetType();
+            int id = (int)type.GetProperty("idRapport").GetValue(bsRapports.Current, null);
+            Modele2.rapportChoisi = Modele2.RapportDepuisId(id);
+            Form f = new FAjoutModifRapport();
+            f.Show();
         }
     }
 }

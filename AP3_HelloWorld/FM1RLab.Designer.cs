@@ -16,7 +16,7 @@ namespace AP3_HelloWorld
         {
             if (disposing && (components != null))
             {
-                components.Dispose();
+                components.Dispose(); 
             }
             base.Dispose(disposing);
         }
@@ -52,6 +52,8 @@ namespace AP3_HelloWorld
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BT = new System.Windows.Forms.ToolStripMenuItem();
+            this.Resp = new System.Windows.Forms.Label();
+            this.Labo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVInfPers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -61,11 +63,10 @@ namespace AP3_HelloWorld
             // DGVInfPers
             // 
             this.DGVInfPers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVInfPers.Location = new System.Drawing.Point(344, 342);
+            this.DGVInfPers.Location = new System.Drawing.Point(12, 56);
             this.DGVInfPers.Name = "DGVInfPers";
-            this.DGVInfPers.Size = new System.Drawing.Size(237, 96);
+            this.DGVInfPers.Size = new System.Drawing.Size(591, 368);
             this.DGVInfPers.TabIndex = 0;
-            this.DGVInfPers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInfPers_CellContentClick);
             // 
             // InfoPers
             // 
@@ -77,10 +78,6 @@ namespace AP3_HelloWorld
             this.InfoPers.Text = "Informations personnelles";
             this.InfoPers.UseVisualStyleBackColor = true;
             this.InfoPers.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // ModMDP
             // 
@@ -207,7 +204,7 @@ namespace AP3_HelloWorld
             // 
             // BValider
             // 
-            this.BValider.Location = new System.Drawing.Point(665, 387);
+            this.BValider.Location = new System.Drawing.Point(665, 401);
             this.BValider.Name = "BValider";
             this.BValider.Size = new System.Drawing.Size(75, 23);
             this.BValider.TabIndex = 17;
@@ -236,11 +233,32 @@ namespace AP3_HelloWorld
             this.BT.Text = "Régions";
             this.BT.Click += new System.EventHandler(this.secteursToolStripMenuItem_Click);
             // 
+            // Resp
+            // 
+            this.Resp.AutoSize = true;
+            this.Resp.Location = new System.Drawing.Point(13, 28);
+            this.Resp.Name = "Resp";
+            this.Resp.Size = new System.Drawing.Size(82, 13);
+            this.Resp.TabIndex = 19;
+            this.Resp.Text = "Responsabilité :";
+            // 
+            // Labo
+            // 
+            this.Labo.AutoSize = true;
+            this.Labo.Location = new System.Drawing.Point(241, 28);
+            this.Labo.Name = "Labo";
+            this.Labo.Size = new System.Drawing.Size(66, 13);
+            this.Labo.TabIndex = 20;
+            this.Labo.Text = "Laboratoire :";
+            this.Labo.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FM1RLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Labo);
+            this.Controls.Add(this.Resp);
             this.Controls.Add(this.BValider);
             this.Controls.Add(this.textNouvMDP);
             this.Controls.Add(this.textAncMDP);
@@ -298,5 +316,7 @@ namespace AP3_HelloWorld
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem BT;
+        private System.Windows.Forms.Label Labo;
+        private System.Windows.Forms.Label Resp;
     }
 }
