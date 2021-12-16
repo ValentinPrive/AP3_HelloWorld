@@ -61,9 +61,9 @@ namespace AP3_HelloWorld
             // 
             this.btnMission2.Location = new System.Drawing.Point(16, 126);
             this.btnMission2.Name = "btnMission2";
-            this.btnMission2.Size = new System.Drawing.Size(75, 23);
+            this.btnMission2.Size = new System.Drawing.Size(153, 23);
             this.btnMission2.TabIndex = 2;
-            this.btnMission2.Text = "Mission 2";
+            this.btnMission2.Text = "Mission 2 - Rapports de visite";
             this.btnMission2.UseVisualStyleBackColor = true;
             this.btnMission2.Click += new System.EventHandler(this.btnMission2_Click);
             // 
