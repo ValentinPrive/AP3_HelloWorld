@@ -14,19 +14,15 @@ namespace AP3_HelloWorld
     {
         public FMenu()
         {
-            InitializeComponent();            
+            InitializeComponent();             
         }
 
         private void FMenu_Load(object sender, EventArgs e)
         {
-            lblUtilConnecte.Text = "Utilisateur connecté : " + Modele.UtilisateurConnecte.nom + Modele.UtilisateurConnecte.prenom;
+            lblUtilConnecte.Text = "Bienvenue " + Modele.UtilisateurConnecte.prenom + " " + Modele.UtilisateurConnecte.nom;
         }
 
-        private void FMenu_Shown(object sender, EventArgs e)
-        {
-            //Form f = new FConnexion();
-            //f.Show();
-        }
+        private void FMenu_Shown(object sender, EventArgs e){}
 
         private void btnMission1_Click(object sender, EventArgs e)
         {
@@ -46,5 +42,9 @@ namespace AP3_HelloWorld
             f.Show();
         }
 
+        private void lblUtilConnecte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
