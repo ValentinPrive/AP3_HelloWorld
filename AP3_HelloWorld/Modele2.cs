@@ -26,7 +26,7 @@ namespace AP3_HelloWorld
         }
         public static object listerapport()
         {
-            return maConnexion.RAPPORT.Where(x => x.idVisiteur == Modele.UtilisateurConnecte.idVisiteur).ToList().Select(x => new { x.idRapport, x.dateRapport, x.MOTIF.libMotif, x.bilan, x.Visiteur.nom, nomMedecin = x.MEDECIN.nom }).OrderBy(x => x.dateRapport);
+            return maConnexion.RAPPORT.Where(x => x.idVisiteur == Modele.UtilisateurConnecte.idVisiteur).ToList().Select(x => new { x.idRapport, x.dateRapport, nomMedecin = x.MEDECIN.nom, x.MOTIF.libMotif, x.bilan }).OrderBy(x => x.dateRapport);
         }
     }
 }
